@@ -1,5 +1,8 @@
 <?php
 
+use App\Delivery\Box;
+use App\Delivery\DeliveryInCountry;
+use App\Delivery\DeliveryOtherCountry;
 use App\Str;
 use App\USD;
 use App\UAH;
@@ -49,4 +52,10 @@ echo USD::convert(100);
 echo '<br>';
 echo UAH::convert(100);
 echo '<br>';
+echo '<br>';
 
+$box = new Box(10,10,10);
+echo DeliveryInCountry::getPrice($box);
+echo '<br>';
+echo DeliveryOtherCountry::getPrice($box);
+echo '<br>';

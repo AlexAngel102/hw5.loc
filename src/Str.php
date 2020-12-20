@@ -22,7 +22,7 @@ class Str
         return substr($string, $offsset, $length);
     }
 
-    public static function replace($search, $replace, $subject)
+    public static function replace($search, $replace, $subject) : string
     {
         return str_replace($search, $replace, $subject);
     }

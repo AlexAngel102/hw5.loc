@@ -6,7 +6,7 @@ class USD
 {
     const USD = 1;
 
-    public static function convert(int $sum)
+    public static function convert(float $sum) : float
     {
         return static::USD * $sum;
     }
