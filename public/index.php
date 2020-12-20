@@ -1,6 +1,9 @@
 <?php
 
 use App\Str;
+use App\USD;
+use App\UAH;
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -14,7 +17,7 @@ $autoloader->register();
 
 $phrase  = 'You should eat fruits, vegetables, and fiber every day.';
 $phrase2  = 'You, should, eat, fruits, vegetables, and, fiber, every, day';
-$phrase3 = 'You should eat pizza, beer, and ice cream every day.';
+$phrase3 = ' You should eat pizza, beer, and ice cream every day. ';
 $healthy = ['fruits', 'vegetables', 'fiber'];
 $yummy   = ['pizza', 'beer', 'ice cream'];
 
@@ -34,6 +37,16 @@ echo Str::implode(" and ", $yummy);
 echo '<br>';
 echo Str::strStr($phrase, "f");
 echo '<br>';
-echo Str::trim($phrase);
+echo Str::trim($phrase3);
 echo '<br>';
-echo Str::length($phrase);
+echo Str::sha1($phrase);
+echo '<br>';
+echo Str::md5($phrase);
+echo '<br>';
+echo '<br>';
+
+echo USD::convert(100);
+echo '<br>';
+echo UAH::convert(100);
+echo '<br>';
+
