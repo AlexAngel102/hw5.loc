@@ -32,33 +32,33 @@ class Str
         return strlen($string);
     }
 
-    public static function explode()
+    public static function explode(string $separator , string $string) : array
     {
-
+        return explode($separator, $string);
     }
 
-    public static function implode()
+    public static function implode(string $glue , array $pieces) : string
     {
-
+        return implode ($glue, $pieces);
     }
 
-    public static function strStr()
+    public static function strStr(string $haystack , string $needle)
     {
-
+        return strstr ($haystack, $needle);
     }
 
-    public static function trim()
+    public static function trim(string $string) : string
     {
-
+        return trim($string);
     }
 
-    public static function sha1()
+    public static function sha1(string $string) : string
     {
-
+        return sha1($string);
     }
 
-    public static function md5()
+    public static function md5(string $string) : string
     {
-
+        return md5($string);
     }
 }
